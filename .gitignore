@@ -52,3 +52,9 @@ docs/_build/
 
 # PyBuilder
 target/
+
+# PyCharm IDE config file
+.idea/
+
+# C Files
+*.c
