@@ -196,33 +196,6 @@ def apply_border_west(img, xy, fname='borders-west.pgm'):
     return new_img, fname
 
 
-def apply_border(img, xy, fname='borders.pgm'):
-    """
-    Apply 'better details' filter into the image
-    :param img:
-    :param xy: dimensions
-    :param fname: file name
-    """
-    new_img = Image.new('L', xy)
-
-    # north
-    matrix = [[1.0, 1.0, 1.0], [1.0, -2.0, 1.0], [-1.0, -1.0, -1.0]]
-    apply_mask(xy, img, new_img, matrix)
-    # south
-    matrix = [[-1.0, -1.0, -1.0], [1.0, -2.0, 1.0], [1.0, 1.0, 1.0]]
-    apply_mask(xy, img, new_img, matrix)
-    # leste
-    matrix = [[-1.0, 1.0, 1.0], [-1.0, -2.0, 1.0], [-1.0, 1.0, 1.0]]
-    apply_mask(xy, img, new_img, matrix)
-    # oeste
-    matrix = [[1.0, 1.0, -1.0], [1.0, -2.0, -1.0], [1.0, 1.0, -1.0]]
-    apply_mask(xy, img, new_img, matrix)
-
-    new_img.save(fname)
-
-    return new_img, fname
-
-
 def apply_laplace(img, xy, fname='laplace.pgm'):
     """
     :param img: the image
