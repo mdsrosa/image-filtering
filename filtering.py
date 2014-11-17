@@ -1,4 +1,12 @@
 # -*- coding: utf-8 -*-
+"""
+Processamento de Imagens - Trabalho 4o Bimestre
+Aplicação de filtros em imagens PGM.
+
+@author: Matheus Rosa
+@number: 05210-021
+@date: 2014-11-03
+"""
 import matplotlib.pyplot as plt
 import matplotlib.cm as cm
 import numpy as np
@@ -372,9 +380,9 @@ if __name__ == '__main__':
                     else:
                         print 'Nenhuma imagem foi carregada ate o momento!'
                 elif option == 9:
-                    print 'See you soon!'
+                    print 'Ate breve!'
                     optout = False
                 else:
                     print '%d Nao eh uma opcao valida!' % option
     except KeyboardInterrupt:
-        print '\n\nSee you soon!'
+        print '\n\nAte breve!'
